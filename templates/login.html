@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% block boyd %}
+
+
+
+ <div class="main">
+    <p class="sign" align="center">Giriş yap</p>
+
+    <form method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+    <br>
+      <button class="submit btn btn-danger" align="center">Giriş Yap</button>
+
+
+
+    </div>
+
+
+
+
+
+{% endblock boyd %}

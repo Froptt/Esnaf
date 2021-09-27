@@ -1,0 +1,22 @@
+
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block boyd %}
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <center><h1>Mesaj Gönder</h1></center>
+<form method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+    <br>
+      <button class="submit btn btn-danger" align="center">Gönder</button>
+
+
+   </form>
+ </div>
+</div>
+   {% endblock boyd %}
